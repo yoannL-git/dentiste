@@ -1,0 +1,1201 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Évaluation complète - Critères de choix d'un laboratoire dentaire</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 50px 40px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 36px;
+            margin-bottom: 15px;
+        }
+        
+        .header p {
+            font-size: 20px;
+            opacity: 0.95;
+        }
+        
+        .header .duration {
+            font-size: 16px;
+            opacity: 0.85;
+            background: rgba(255,255,255,0.2);
+            display: inline-block;
+            padding: 10px 20px;
+            border-radius: 20px;
+            margin-top: 15px;
+        }
+        
+        .intro {
+            padding: 40px;
+            background: #f8f9fa;
+            border-bottom: 3px solid #667eea;
+        }
+        
+        .intro h2 {
+            color: #667eea;
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+        
+        .intro p {
+            margin-bottom: 15px;
+            font-size: 16px;
+            color: #333;
+        }
+        
+        .intro .highlight {
+            background: #fff3cd;
+            padding: 15px;
+            border-left: 4px solid #ffc107;
+            margin-top: 20px;
+            border-radius: 5px;
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        .section-title {
+            text-align: center;
+            color: #667eea;
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+        
+        .section-subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 40px;
+            font-size: 16px;
+        }
+        
+        .criterion {
+            background: white;
+            border: 2px solid #e9ecef;
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 25px;
+            transition: all 0.3s ease;
+        }
+        
+        .criterion:hover {
+            border-color: #667eea;
+            box-shadow: 0 5px 20px rgba(102, 126, 234, 0.1);
+        }
+        
+        .criterion-title {
+            font-size: 22px;
+            color: #333;
+            font-weight: 600;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #e9ecef;
+        }
+        
+        .criterion-description {
+            color: #666;
+            margin-bottom: 15px;
+            font-size: 15px;
+            line-height: 1.7;
+        }
+        
+        .criterion-examples {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .criterion-examples h4 {
+            color: #667eea;
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+        
+        .criterion-examples ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .criterion-examples li {
+            padding: 5px 0;
+            font-size: 14px;
+            color: #555;
+        }
+        
+        .criterion-examples li:before {
+            content: "✓ ";
+            color: #28a745;
+            font-weight: bold;
+            margin-right: 8px;
+        }
+        
+        .rating-section {
+            background: #fff3cd;
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 4px solid #ffc107;
+        }
+        
+        .rating-section h4 {
+            color: #333;
+            margin-bottom: 15px;
+            font-size: 16px;
+        }
+        
+        .rating-options {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-bottom: 15px;
+        }
+        
+        .rating-option {
+            flex: 1;
+            min-width: 120px;
+            background: white;
+            border: 2px solid #dee2e6;
+            border-radius: 10px;
+            padding: 12px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .rating-option:hover {
+            border-color: #667eea;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.2);
+        }
+        
+        .rating-option input[type="radio"] {
+            display: none;
+        }
+        
+        .rating-option input[type="radio"]:checked + label {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 8px;
+            padding: 5px;
+        }
+        
+        .rating-option label {
+            cursor: pointer;
+            display: block;
+        }
+        
+        .rating-value {
+            font-size: 22px;
+            font-weight: bold;
+            color: #667eea;
+            margin-bottom: 5px;
+        }
+        
+        .rating-label {
+            font-size: 12px;
+            color: #666;
+        }
+        
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #dee2e6;
+            border-radius: 8px;
+            font-family: inherit;
+            font-size: 14px;
+            resize: vertical;
+            min-height: 80px;
+            margin-top: 10px;
+        }
+        
+        textarea:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+        
+        .final-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px;
+            margin-top: 30px;
+        }
+        
+        .final-section h2 {
+            margin-bottom: 20px;
+            font-size: 26px;
+        }
+        
+        .final-section p {
+            margin-bottom: 15px;
+            font-size: 16px;
+            opacity: 0.95;
+        }
+        
+        .final-question {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            color: #333;
+        }
+        
+        .final-question h3 {
+            color: #667eea;
+            margin-bottom: 15px;
+        }
+        
+        .profile-section {
+            background: #f8f9fa;
+            padding: 40px;
+            border-top: 3px solid #667eea;
+        }
+        
+        .profile-section h2 {
+            color: #667eea;
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+        
+        .profile-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        
+        .profile-field {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            border: 2px solid #dee2e6;
+        }
+        
+        .profile-field label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: #333;
+        }
+        
+        .profile-field select,
+        .profile-field input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #dee2e6;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+        
+        .footer {
+            background: #667eea;
+            color: white;
+            text-align: center;
+            padding: 30px;
+        }
+        
+        .footer p {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+        
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            
+            .container {
+                box-shadow: none;
+            }
+            
+            .criterion {
+                page-break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🦷 Critères de choix d'un laboratoire dentaire</h1>
+            <p>Évaluation détaillée</p>
+            <div class="duration">⏱️ Durée : 15-20 minutes</div>
+        </div>
+        
+        <div class="intro">
+            <p style="font-size: 17px; margin-bottom: 15px;">
+                <strong>Cher confrère, chère consœur,</strong>
+            </p>
+            <p style="font-size: 16px; margin-bottom: 15px;">
+                Évaluez l'importance de chaque critère pour le choix d'un laboratoire de prothèses dentaires.
+            </p>
+        </div>
+        
+        <div class="content">
+            <h2 class="section-title">📊 Évaluez l'importance de chaque critère</h2>
+            <p class="section-subtitle">
+                Pour chaque critère ci-dessous, indiquez son niveau d'importance de 1 (peu important) à 5 (absolument critique)
+            </p>
+            
+            <!-- QUALITÉ -->
+            <div class="criterion">
+                <div class="criterion-title">Qualité des prothèses</div>
+                
+                <div class="criterion-description">
+                    Ajustement parfait dès la pose (marginal et occlusal), esthétique naturelle irréprochable, 
+                    constance des résultats dans le temps, taux de retours inférieur à 5%.
+                </div>
+                
+                <div class="criterion-examples">
+                    <h4>Exemples concrets :</h4>
+                    <ul>
+                        <li>Couronne qui se pose sans nécessiter de retouches au fauteuil</li>
+                        <li>Esthétique (teinte, morphologie) naturelle et harmonieuse</li>
+                    </ul>
+                </div>
+                
+                <div class="rating-section">
+                    <h4>📍 Niveau d'importance pour vous ?</h4>
+                    <div class="rating-options">
+                        <div class="rating-option">
+                            <input type="radio" name="qualite" id="qualite1">
+                            <label for="qualite1">
+                                <div class="rating-value">1</div>
+                                <div class="rating-label">Peu important</div>
+                            </label>
+                        </div>
+                        <div class="rating-option">
+                            <input type="radio" name="qualite" id="qualite2">
+                            <label for="qualite2">
+                                <div class="rating-value">2</div>
+                                <div class="rating-label">Légèrement</div>
+                            </label>
+                        </div>
+                        <div class="rating-option">
+                            <input type="radio" name="qualite" id="qualite3">
+                            <label for="qualite3">
+                                <div class="rating-value">3</div>
+                                <div class="rating-label">Important</div>
+                            </label>
+                        </div>
+                        <div class="rating-option">
+                            <input type="radio" name="qualite" id="qualite4">
+                            <label for="qualite4">
+                                <div class="rating-value">4</div>
+                                <div class="rating-label">Très important</div>
+                            </label>
+                        </div>
+                        <div class="rating-option">
+                            <input type="radio" name="qualite" id="qualite5">
+                            <label for="qualite5">
+                                <div class="rating-value">5</div>
+                                <div class="rating-label">Critique</div>
+                            </label>
+                        </div>
+                    </div>
+                    <textarea placeholder="💬 Commentaire facultatif"></textarea>
+                </div>
+            </div>
+            
+            <!-- PRIX -->
+            <div class="criterion">
+                <div class="criterion-title">Prix et transparence tarifaire</div>
+                
+                <div class="criterion-description">
+                    Tarification compétitive par rapport au marché, transparence totale (pas de frais cachés), 
+                    devis clairs permettant de calculer facilement les marges, options modulaires selon les budgets patients.
+                </div>
+                
+                <div class="criterion-examples">
+                    <h4>Exemples concrets :</h4>
+                    <ul>
+                        <li>Couronne zircone à un prix défiant toute concurrence</li>
+                        <li>Catalogue avec grille tarifaire claire (entrée/milieu/premium)</li>
+                    </ul>
+                </div>
+                
+                <div class="rating-section">
+                    <h4>📍 Niveau d'importance pour vous ?</h4>
+                    <div class="rating-options">
+                        <div class="rating-option">
+                            <input type="radio" name="prix" id="prix1">
+                            <label for="prix1">
+                                <div class="rating-value">1</div>
+                                <div class="rating-label">Peu important</div>
+                            </label>
+                        </div>
+                        <div class="rating-option">
+                            <input type="radio" name="prix" id="prix2">
+                            <label for="prix2">
+                                <div class="rating-value">2</div>
+                                <div class="rating-label">Légèrement</div>
+                            </label>
+                        </div>
+                        <div class="rating-option">
+                            <input type="radio" name="prix" id="prix3">
+                            <label for="prix3">
+                                <div class="rating-value">3</div>
+                                <div class="rating-label">Important</div>
+                            </label>
+                        </div>
+                        <div class="rating-option">
+                            <input type="radio" name="prix" id="prix4">
+                            <label for="prix4">
+                                <div class="rating-value">4</div>
+                                <div class="rating-label">Très important</div>
+                            </label>
+                        </div>
+                        <div class="rating-option">
+                            <input type="radio" name="prix" id="prix5">
+                            <label for="prix5">
+                                <div class="rating-value">5</div>
+                                <div class="rating-label">Critique</div>
+                            </label>
+                        </div>
+                    </div>
+                    <textarea placeholder="💬 Commentaire facultatif"></textarea>
+                </div>
+            </div>
+            
+            <!-- DÉLAIS -->
+            <div class="criterion">
+                <div class="criterion-title">Délais : respect et rapidité</div>
+                
+                <div class="criterion-description">
+                    Respect systématique des engagements pris, délais attractifs (5-10 jours), 
+                    livraison ponctuelle.
+                </div>
+                
+                <div class="criterion-examples">
+                    <h4>Exemples concrets :</h4>
+                    <ul>
+                        <li>Livraison au jour promis dans 95% des cas minimum</li>
+                        <li>Délais compétitifs (moins de 7 jours)</li>
+                    </ul>
+                </div>
+                
+                <div class="rating-section">
+                    <h4>📍 Niveau d'importance pour vous ?</h4>
+                    <div class="rating-options">
+                        <div class="rating-option">
+                            <input type="radio" name="delais" id="delais1">
+                            <label for="delais1">
+                                <div class="rating-value">1</div>
+                                <div class="rating-label">Peu important</div>
+                            </label>
+                        </div>
+                        <div class="rating-option">
+                            <input type="radio" name="delais" id="delais2">
+                            <label for="delais2">
+                                <div class="rating-value">2</div>
+                                <div class="rating-label">Légèrement</div>
+                            </label>
+                        </div>
+                        <div class="rating-option">
+                            <input type="radio" name="delais" id="delais3">
+                            <label for="delais3">
+                                <div class="rating-value">3</div>
+                                <div class="rating-label">Important</div>
+                            </label>
+                        </div>
+                        <div class="rating-option">
+                            <input type="radio" name="delais" id="delais4">
+                            <label for="delais4">
+                                <div class="rating-value">4</div>
+                                <div class="rating-label">Très important</div>
+                            </label>
+                        </div>
+                        <div class="rating-option">
+                            <input type="radio" name="delais" id="delais5">
+                            <label for="delais5">
+                                <div class="rating-value">5</div>
+                                <div class="rating-label">Critique</div>
+                            </label>
+                        </div>
+                    </div>
+                    <textarea placeholder="💬 Commentaire facultatif"></textarea>
+                </div>
+            </div>
+            
+            <!-- SUIVI EN TEMPS RÉEL -->
+            <div class="criterion">
+                <div class="criterion-title">Suivi en temps réel (tracking)</div>
+                
+                <div class="criterion-description">
+                    Possibilité de consulter l'état d'avancement de vos commandes à tout moment via une plateforme en ligne 
+                    (réception, conception, fabrication, contrôle, expédition). Notifications automatiques aux étapes clés.
+                </div>
+                
+                <div class="criterion-examples">
+                    <h4>Exemples concrets :</h4>
+                    <ul>
+                        <li>Savoir à tout moment où en est votre cas sans appeler</li>
+                        <li>Notification "Votre couronne est en fabrication (étape 2/4)"</li>
+                    </ul>
+                </div>
+                
+                <div class="rating-section">
+                    <h4>📍 Niveau d'importance pour vous ?</h4>
+                    <div class="rating-options">
+                        <div class="rating-option">
+                            <input type="radio" name="tracking" id="tracking1">
+                            <label for="tracking1">
+                                <div class="rating-value">1</div>
+                                <div class="rating-label">Peu important</div>
+                            </label>
+                        </div>
+                        <div class="rating-option">
+                            <input type="radio" name="tracking" id="tracking2">
+                            <label for="tracking2">
+                                <div class="rating-value">2</div>
+                                <div class="rating-label">Légèrement</div>
+                            </label>
+                        </div>
+                        <div class="rating-option">
+                            <input type="radio" name="tracking" id="tracking3">
+                            <label for="tracking3">
+                                <div class="rating-value">3</div>
+                                <div class="rating-label">Important</div>
+                            </label>
+                        </div>
+                        <div class="rating-option">
+                            <input type="radio" name="tracking" id="tracking4">
+                            <label for="tracking4">
+                                <div class="rating-value">4</div>
+                                <div class="rating-label">Très important</div>
+                            </label>
+                        </div>
+                        <div class="rating-option">
+                            <input type="radio" name="tracking" id="tracking5">
+                            <label for="tracking5">
+                                <div class="rating-value">5</div>
+                                <div class="rating-label">Critique</div>
+                            </label>
+                        </div>
+                    </div>
+                    <textarea placeholder="💬 Commentaire facultatif"></textarea>
+                </div>
+            </div>
+            
+            <!-- COMMUNICATION ET CONSEIL -->
+            <div class="criterion">
+                <div class="criterion-title">Communication et conseil clinique</div>
+                
+                <div class="criterion-description">
+                    Accessibilité immédiate du prothésiste (téléphone/messagerie), expertise conseil sur matériaux et protocoles, 
+                    proactivité (signale les problèmes plutôt que de "faire au mieux"), honnêteté.
+                </div>
+                
+                <div class="criterion-examples">
+                    <h4>Exemples concrets :</h4>
+                    <ul>
+                        <li>Le prothésiste signale des artefacts dans la zone de préparation</li>
+                        <li>Conseil matériaux : "Pour ce cas, je suggère la zircone"</li>
+                    </ul>
+                </div>
+                
+                <div class="rating-section">
+                    <h4>📍 Niveau d'importance pour vous ?</h4>
+                    <div class="rating-options">
+                        <div class="rating-option">
+                            <input type="radio" name="communication" id="communication1">
+                            <label for="communication1">
+                                <div class="rating-value">1</div>
+                                <div class="rating-label">Peu important</div>
+                            </label>
+                        </div>
+                        <div class="rating-option">
+                            <input type="radio" name="communication" id="communication2">
+                            <label for="communication2">
+                                <div class="rating-value">2</div>
+                                <div class="rating-label">Légèrement</div>
+                            </label>
+                        </div>
+                        <div class="rating-option">
+                            <input type="radio" name="communication" id="communication3">
+                            <label for="communication3">
+                                <div class="rating-value">3</div>
+                                <div class="rating-label">Important</div>
+                            </label>
+                        </div>
+                        <div class="rating-option">
+                            <input type="radio" name="communication" id="communication4">
+                            <label for="communication4">
+                                <div class="rating-value">4</div>
+                                <div class="rating-label">Très important</div>
+                            </label>
+                        </div>
+                        <div class="rating-option">
+                            <input type="radio" name="communication" id="communication5">
+                            <label for="communication5">
+                                <div class="rating-value">5</div>
+                                <div class="rating-label">Critique</div>
+                            </label>
+                        </div>
+                    </div>
+                    <textarea placeholder="💬 Commentaire facultatif"></textarea>
+                </div>
+            </div>
+            
+            <!-- ADAPTABILITÉ -->
+            <div class="criterion">
+                <div class="criterion-title">Adaptabilité face aux cas complexes</div>
+                
+                <div class="criterion-description">
+                    Capacité du laboratoire à gérer des situations non-standard, à s'adapter aux contraintes cliniques 
+                    et à trouver des solutions créatives. Flexibilité face aux demandes spécifiques.
+                </div>
+                
+                <div class="criterion-examples">
+                    <h4>Exemples concrets :</h4>
+                    <ul>
+                        <li>Prothèse mixte (stellite + bridge combinés)</li>
+                        <li>Travail avec une empreinte perfectible</li>
+                    </ul>
+                </div>
+                
+                <div class="rating-section">
+                    <h4>📍 Niveau d'importance pour vous ?</h4>
+                    <div class="rating-options">
+                        <div class="rating-option">
+                            <input type="radio" name="adaptabilite" id="adaptabilite1">
+                            <label for="adaptabilite1">
+                                <div class="rating-value">1</div>
+                                <div class="rating-label">Peu important</div>
+                            </label>
+                        </div>
+                        <div class="rating-option">
+                            <input type="radio" name="adaptabilite" id="adaptabilite2">
+                            <label for="adaptabilite2">
+                                <div class="rating-value">2</div>
+                                <div class="rating-label">Légèrement</div>
+                            </label>
+                        </div>
+                        <div class="rating-option">
+                            <input type="radio" name="adaptabilite" id="adaptabilite3">
+                            <label for="adaptabilite3">
+                                <div class="rating-value">3</div>
+                                <div class="rating-label">Important</div>
+                            </label>
+                        </div>
+                        <div class="rating-option">
+                            <input type="radio" name="adaptabilite" id="adaptabilite4">
+                            <label for="adaptabilite4">
+                                <div class="rating-value">4</div>
+                                <div class="rating-label">Très important</div>
+                            </label>
+                        </div>
+                        <div class="rating-option">
+                            <input type="radio" name="adaptabilite" id="adaptabilite5">
+                            <label for="adaptabilite5">
+                                <div class="rating-value">5</div>
+                                <div class="rating-label">Critique</div>
+                            </label>
+                        </div>
+                    </div>
+                    <textarea placeholder="💬 Commentaire facultatif"></textarea>
+                </div>
+            </div>
+            
+            <!-- ACCESSIBILITÉ NUMÉRIQUE -->
+            <div class="criterion">
+                <div class="criterion-title">Accessibilité numérique</div>
+                
+                <div class="criterion-description">
+                    Compatibilité avec tous les scanners intra-oraux du marché (Trios, iTero, Medit, Carestream, 3Shape...), 
+                    plateforme de commande intuitive, support technique réactif.
+                </div>
+                
+                <div class="criterion-examples">
+                    <h4>Exemples concrets :</h4>
+                    <ul>
+                        <li>Upload et validation immédiate en 2 minutes</li>
+                        <li>Le laboratoire dispose d'une application mobile</li>
+                    </ul>
+                </div>
+                
+                <div class="rating-section">
+                    <h4>📍 Niveau d'importance pour vous ?</h4>
+                    <div class="rating-options">
+                        <div class="rating-option">
+                            <input type="radio" name="numerique" id="numerique1">
+                            <label for="numerique1">
+                                <div class="rating-value">1</div>
+                                <div class="rating-label">Peu important</div>
+                            </label>
+                        </div>
+                        <div class="rating-option">
+                            <input type="radio" name="numerique" id="numerique2">
+                            <label for="numerique2">
+                                <div class="rating-value">2</div>
+                                <div class="rating-label">Légèrement</div>
+                            </label>
+                        </div>
+                        <div class="rating-option">
+                            <input type="radio" name="numerique" id="numerique3">
+                            <label for="numerique3">
+                                <div class="rating-value">3</div>
+                                <div class="rating-label">Important</div>
+                            </label>
+                        </div>
+                        <div class="rating-option">
+                            <input type="radio" name="numerique" id="numerique4">
+                            <label for="numerique4">
+                                <div class="rating-value">4</div>
+                                <div class="rating-label">Très important</div>
+                            </label>
+                        </div>
+                        <div class="rating-option">
+                            <input type="radio" name="numerique" id="numerique5">
+                            <label for="numerique5">
+                                <div class="rating-value">5</div>
+                                <div class="rating-label">Critique</div>
+                            </label>
+                        </div>
+                    </div>
+                    <textarea placeholder="💬 Commentaire facultatif"></textarea>
+                </div>
+            </div>
+            
+            <!-- SERVICE URGENCE -->
+            <div class="criterion">
+                <div class="criterion-title">Service urgence / express</div>
+                
+                <div class="criterion-description">
+                    Capacité à gérer les urgences en 24-48h (réparations, couronnes unitaires) moyennant un surcoût 
+                    clairement indiqué, disponibilité 7j/7 ou en semaine étendue.
+                </div>
+                
+                <div class="criterion-examples">
+                    <h4>Exemples concrets :</h4>
+                    <ul>
+                        <li>Réparation d'appareil amovible en 24h (surcoût de +100%)</li>
+                        <li>Couronne unitaire en 48h (+50% du prix standard)</li>
+                    </ul>
+                </div>
+                
+                <div class="rating-section">
+                    <h4>📍 Niveau d'importance pour vous ?</h4>
+                    <div class="rating-options">
+                        <div class="rating-option">
+                            <input type="radio" name="urgence" id="urgence1">
+                            <label for="urgence1">
+                                <div class="rating-value">1</div>
+                                <div class="rating-label">Peu important</div>
+                            </label>
+                        </div>
+                        <div class="rating-option">
+                            <input type="radio" name="urgence" id="urgence2">
+                            <label for="urgence2">
+                                <div class="rating-value">2</div>
+                                <div class="rating-label">Légèrement</div>
+                            </label>
+                        </div>
+                        <div class="rating-option">
+                            <input type="radio" name="urgence" id="urgence3">
+                            <label for="urgence3">
+                                <div class="rating-value">3</div>
+                                <div class="rating-label">Important</div>
+                            </label>
+                        </div>
+                        <div class="rating-option">
+                            <input type="radio" name="urgence" id="urgence4">
+                            <label for="urgence4">
+                                <div class="rating-value">4</div>
+                                <div class="rating-label">Très important</div>
+                            </label>
+                        </div>
+                        <div class="rating-option">
+                            <input type="radio" name="urgence" id="urgence5">
+                            <label for="urgence5">
+                                <div class="rating-value">5</div>
+                                <div class="rating-label">Critique</div>
+                            </label>
+                        </div>
+                    </div>
+                    <textarea placeholder="💬 Commentaire facultatif"></textarea>
+                </div>
+            </div>
+            
+            <!-- LANGUE -->
+            <div class="criterion">
+                <div class="criterion-title">Échanges téléphoniques en français</div>
+                
+                <div class="criterion-description">
+                    Garantie de pouvoir échanger en français (ou votre langue) par téléphone avec le prothésiste, 
+                    interlocuteur dédié joignable, horaires compatibles (8h-18h minimum).
+                </div>
+                
+                <div class="criterion-examples">
+                    <h4>Exemples concrets :</h4>
+                    <ul>
+                        <li>Laboratoire étranger avec équipe francophone disponible</li>
+                        <li>Prothésiste français qui répond directement</li>
+                    </ul>
+                </div>
+                
+                <div class="rating-section">
+                    <h4>📍 Niveau d'importance pour vous ?</h4>
+                    <div class="rating-options">
+                        <div class="rating-option">
+                            <input type="radio" name="langue" id="langue1">
+                            <label for="langue1">
+                                <div class="rating-value">1</div>
+                                <div class="rating-label">Peu important</div>
+                            </label>
+                        </div>
+                        <div class="rating-option">
+                            <input type="radio" name="langue" id="langue2">
+                            <label for="langue2">
+                                <div class="rating-value">2</div>
+                                <div class="rating-label">Légèrement</div>
+                            </label>
+                        </div>
+                        <div class="rating-option">
+                            <input type="radio" name="langue" id="langue3">
+                            <label for="langue3">
+                                <div class="rating-value">3</div>
+                                <div class="rating-label">Important</div>
+                            </label>
+                        </div>
+                        <div class="rating-option">
+                            <input type="radio" name="langue" id="langue4">
+                            <label for="langue4">
+                                <div class="rating-value">4</div>
+                                <div class="rating-label">Très important</div>
+                            </label>
+                        </div>
+                        <div class="rating-option">
+                            <input type="radio" name="langue" id="langue5">
+                            <label for="langue5">
+                                <div class="rating-value">5</div>
+                                <div class="rating-label">Critique</div>
+                            </label>
+                        </div>
+                    </div>
+                    <textarea placeholder="💬 Commentaire facultatif"></textarea>
+                </div>
+            </div>
+            
+            <!-- TRAÇABILITÉ -->
+            <div class="criterion">
+                <div class="criterion-title">Accessibilité à la traçabilité et aux documents légaux</div>
+                
+                <div class="criterion-description">
+                    Accès facile et immédiat aux certificats de conformité (CE, ISO), fourniture systématique 
+                    des documents légaux sans avoir à les demander, information claire sur l'origine des matériaux.
+                </div>
+                
+                <div class="criterion-examples">
+                    <h4>Exemples concrets :</h4>
+                    <ul>
+                        <li>Certificats de conformité fournis automatiquement avec chaque livraison</li>
+                        <li>Accès en ligne aux documents légaux à tout moment</li>
+                    </ul>
+                </div>
+                
+                <div class="rating-section">
+                    <h4>📍 Niveau d'importance pour vous ?</h4>
+                    <div class="rating-options">
+                        <div class="rating-option">
+                            <input type="radio" name="tracabilite" id="tracabilite1">
+                            <label for="tracabilite1">
+                                <div class="rating-value">1</div>
+                                <div class="rating-label">Peu important</div>
+                            </label>
+                        </div>
+                        <div class="rating-option">
+                            <input type="radio" name="tracabilite" id="tracabilite2">
+                            <label for="tracabilite2">
+                                <div class="rating-value">2</div>
+                                <div class="rating-label">Légèrement</div>
+                            </label>
+                        </div>
+                        <div class="rating-option">
+                            <input type="radio" name="tracabilite" id="tracabilite3">
+                            <label for="tracabilite3">
+                                <div class="rating-value">3</div>
+                                <div class="rating-label">Important</div>
+                            </label>
+                        </div>
+                        <div class="rating-option">
+                            <input type="radio" name="tracabilite" id="tracabilite4">
+                            <label for="tracabilite4">
+                                <div class="rating-value">4</div>
+                                <div class="rating-label">Très important</div>
+                            </label>
+                        </div>
+                        <div class="rating-option">
+                            <input type="radio" name="tracabilite" id="tracabilite5">
+                            <label for="tracabilite5">
+                                <div class="rating-value">5</div>
+                                <div class="rating-label">Critique</div>
+                            </label>
+                        </div>
+                    </div>
+                    <textarea placeholder="💬 Commentaire facultatif"></textarea>
+                </div>
+            </div>
+            
+            <!-- CATALOGUE -->
+            <div class="criterion">
+                <div class="criterion-title">Gamme de produits (catalogue)</div>
+                
+                <div class="criterion-description">
+                    Large étendue de l'offre couvrant prothèse fixe, amovible, implantologie, chirurgie guidée, gouttières. 
+                    Variété de matériaux (zircone, E.max, PMMA, résine, métaux). Options pour différents budgets.
+                </div>
+                
+                <div class="criterion-examples">
+                    <h4>Exemples concrets :</h4>
+                    <ul>
+                        <li>Laboratoire polyvalent : du bridge à la gouttière</li>
+                        <li>Centraliser toutes les commandes chez un partenaire</li>
+                    </ul>
+                </div>
+                
+                <div class="rating-section">
+                    <h4>📍 Niveau d'importance pour vous ?</h4>
+                    <div class="rating-options">
+                        <div class="rating-option">
+                            <input type="radio" name="catalogue" id="catalogue1">
+                            <label for="catalogue1">
+                                <div class="rating-value">1</div>
+                                <div class="rating-label">Peu important</div>
+                            </label>
+                        </div>
+                        <div class="rating-option">
+                            <input type="radio" name="catalogue" id="catalogue2">
+                            <label for="catalogue2">
+                                <div class="rating-value">2</div>
+                                <div class="rating-label">Légèrement</div>
+                            </label>
+                        </div>
+                        <div class="rating-option">
+                            <input type="radio" name="catalogue" id="catalogue3">
+                            <label for="catalogue3">
+                                <div class="rating-value">3</div>
+                                <div class="rating-label">Important</div>
+                            </label>
+                        </div>
+                        <div class="rating-option">
+                            <input type="radio" name="catalogue" id="catalogue4">
+                            <label for="catalogue4">
+                                <div class="rating-value">4</div>
+                                <div class="rating-label">Très important</div>
+                            </label>
+                        </div>
+                        <div class="rating-option">
+                            <input type="radio" name="catalogue" id="catalogue5">
+                            <label for="catalogue5">
+                                <div class="rating-value">5</div>
+                                <div class="rating-label">Critique</div>
+                            </label>
+                        </div>
+                    </div>
+                    <textarea placeholder="💬 Commentaire facultatif"></textarea>
+                </div>
+            </div>
+            
+            <!-- PROXIMITÉ -->
+            <div class="criterion">
+                <div class="criterion-title">Proximité géographique</div>
+                
+                <div class="criterion-description">
+                    Distance physique entre le laboratoire et votre cabinet, fréquence des livraisons, 
+                    possibilité d'intervention du prothésiste au fauteuil si nécessaire.
+                </div>
+                
+                <div class="criterion-examples">
+                    <h4>Exemples concrets :</h4>
+                    <ul>
+                        <li>Laboratoire à 10 km : livraison quotidienne</li>
+                        <li>Intervention possible au fauteuil pour ajustements</li>
+                    </ul>
+                </div>
+                
+                <div class="rating-section">
+                    <h4>📍 Niveau d'importance pour vous ?</h4>
+                    <div class="rating-options">
+                        <div class="rating-option">
+                            <input type="radio" name="proximite" id="proximite1">
+                            <label for="proximite1">
+                                <div class="rating-value">1</div>
+                                <div class="rating-label">Peu important</div>
+                            </label>
+                        </div>
+                        <div class="rating-option">
+                            <input type="radio" name="proximite" id="proximite2">
+                            <label for="proximite2">
+                                <div class="rating-value">2</div>
+                                <div class="rating-label">Légèrement</div>
+                            </label>
+                        </div>
+                        <div class="rating-option">
+                            <input type="radio" name="proximite" id="proximite3">
+                            <label for="proximite3">
+                                <div class="rating-value">3</div>
+                                <div class="rating-label">Important</div>
+                            </label>
+                        </div>
+                        <div class="rating-option">
+                            <input type="radio" name="proximite" id="proximite4">
+                            <label for="proximite4">
+                                <div class="rating-value">4</div>
+                                <div class="rating-label">Très important</div>
+                            </label>
+                        </div>
+                        <div class="rating-option">
+                            <input type="radio" name="proximite" id="proximite5">
+                            <label for="proximite5">
+                                <div class="rating-value">5</div>
+                                <div class="rating-label">Critique</div>
+                            </label>
+                        </div>
+                    </div>
+                    <textarea placeholder="💬 Commentaire facultatif"></textarea>
+                </div>
+            </div>
+            
+            <!-- RÉPUTATION -->
+            <div class="criterion">
+                <div class="criterion-title">Réputation et recommandations</div>
+                
+                <div class="criterion-description">
+                    Notoriété du laboratoire, recommandations d'autres praticiens, avis en ligne, portfolio de cas réalisés, 
+                    années d'expérience, références clients.
+                </div>
+                
+                <div class="criterion-examples">
+                    <h4>Exemples concrets :</h4>
+                    <ul>
+                        <li>4,8/5 étoiles sur 250 avis de confrères</li>
+                        <li>Recommandé par plusieurs confrères de votre réseau</li>
+                    </ul>
+                </div>
+                
+                <div class="rating-section">
+                    <h4>📍 Niveau d'importance pour vous ?</h4>
+                    <div class="rating-options">
+                        <div class="rating-option">
+                            <input type="radio" name="reputation" id="reputation1">
+                            <label for="reputation1">
+                                <div class="rating-value">1</div>
+                                <div class="rating-label">Peu important</div>
+                            </label>
+                        </div>
+                        <div class="rating-option">
+                            <input type="radio" name="reputation" id="reputation2">
+                            <label for="reputation2">
+                                <div class="rating-value">2</div>
+                                <div class="rating-label">Légèrement</div>
+                            </label>
+                        </div>
+                        <div class="rating-option">
+                            <input type="radio" name="reputation" id="reputation3">
+                            <label for="reputation3">
+                                <div class="rating-value">3</div>
+                                <div class="rating-label">Important</div>
+                            </label>
+                        </div>
+                        <div class="rating-option">
+                            <input type="radio" name="reputation" id="reputation4">
+                            <label for="reputation4">
+                                <div class="rating-value">4</div>
+                                <div class="rating-label">Très important</div>
+                            </label>
+                        </div>
+                        <div class="rating-option">
+                            <input type="radio" name="reputation" id="reputation5">
+                            <label for="reputation5">
+                                <div class="rating-value">5</div>
+                                <div class="rating-label">Critique</div>
+                            </label>
+                        </div>
+                    </div>
+                    <textarea placeholder="💬 Commentaire facultatif"></textarea>
+                </div>
+            </div>
+            
+            <!-- FORMATION -->
+            <div class="criterion">
+                <div class="criterion-title">Formation et accompagnement</div>
+                
+                <div class="criterion-description">
+                    Formations proposées par le laboratoire (webinaires, ateliers), accompagnement personnalisé pour cas complexes, 
+                    documentation technique accessible, support pour intégration des flux numériques.
+                </div>
+                
+                <div class="criterion-examples">
+                    <h4>Exemples concrets :</h4>
+                    <ul>
+                        <li>Webinaire mensuel "Nouveaux protocoles"</li>
+                        <li>Support pour démarrer avec la dentisterie numérique</li>
+                    </ul>
+                </div>
+                
+                <div class="rating-section">
+                    <h4>📍 Niveau d'importance pour vous ?</h4>
+                    <div class="rating-options">
+                        <div class="rating-option">
+                            <input type="radio" name="formation" id="formation1">
+                            <label for="formation1">
+                                <div class="rating-value">1</div>
+                                <div class="rating-label">Peu important</div>
+                            </label>
+                        </div>
+                        <div class="rating-option">
+                            <input type="radio" name="formation" id="formation2">
+                            <label for="formation2">
+                                <div class="rating-value">2</div>
+                                <div class="rating-label">Légèrement</div>
+                            </label>
+                        </div>
+                        <div class="rating-option">
+                            <input type="radio" name="formation" id="formation3">
+                            <label for="formation3">
+                                <div class="rating-value">3</div>
+                                <div class="rating-label">Important</div>
+                            </label>
+                        </div>
+                        <div class="rating-option">
+                            <input type="radio" name="formation" id="formation4">
+                            <label for="formation4">
+                                <div class="rating-value">4</div>
+                                <div class="rating-label">Très important</div>
+                            </label>
+                        </div>
+                        <div class="rating-option">
+                            <input type="radio" name="formation" id="formation5">
+                            <label for="formation5">
+                                <div class="rating-value">5</div>
+                                <div class="rating-label">Critique</div>
+                            </label>
+                        
